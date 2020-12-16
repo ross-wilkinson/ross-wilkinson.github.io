@@ -1,0 +1,285 @@
+---
+title: 'Matlab Figures'
+date: 2020-12-15
+permalink: /posts/2020/12/matlab-figures/
+tags:
+  - matlab
+---
+
+# Create Figure 1 for Rock-No-Rock manuscript
+
+
+Set directories
+
+
+
+```matlab:Code
+expDir = "/Users/rosswilkinson/Google Drive/projects/rock-no-rock";
+datDir = strcat(expDir, "/data");
+docDir = strcat(expDir, "/docs");
+
+```
+
+
+
+Load rock-no-rock data
+
+
+
+```matlab:Code
+cd(datDir)
+load("group_data.mat")
+
+mdl{14}.data(1,:) = [];
+```
+
+
+
+Create figure (3x1) 
+
+
+
+```matlab:Code
+figure('color','w','position',[50 50 250 750])
+
+```
+
+
+
+Set color combination
+
+
+
+```matlab:Code
+c1 = [27,158,119]/255;
+c2 = [217,95,2]/255;
+c3 = [117,112,179]/255;
+```
+
+# Power
+
+
+Create subplot for power v mass
+
+
+
+```matlab:Code
+ax1 = subplot(3,1,1);
+x2 = 0:0.1:35;
+
+for i = 1:19
+    switch i
+        case{12,16}
+        otherwise
+            wgt = mdl{i}.data.wgt;
+            pwr = mdl{i}.data.pwr;
+            x1 = min(wgt):0.1:max(wgt);
+            [fitPwr, gofPwr] = fit(wgt,pwr,"poly2");
+            plot(x1,fitPwr(x1),'k')
+            xlim([0 35])
+            ylim([0 2000])
+            hold on
+            scatter(wgt,pwr,10,'k','filled')
+            r2(i) = gofPwr.rsquare;
+    end
+end
+
+xlabel('Hanging mass (kg)')
+ylabel('Maximal 1-s power output (W)')
+xlim([0 35])
+ylim([0 2000])
+ax1.Box = 'off';
+ax1.XTick = x2(1:50:end);
+ax1.XTickLabels = round(x2(1:50:end)/2.205,1);
+title('A')
+ax1.Title.HorizontalAlignment = 'left';
+ax1.Title.VerticalAlignment = 'middle';
+ax1.Title.Position = [2, ax1.YLim(2), 0];
+
+```
+
+
+
+Plot Pmax and Mopt line
+
+
+
+```matlab:Code
+for i = 1:19
+    switch i
+        case{12,16}
+            P_max(i) = nan;
+            M_hopt(i) = nan;
+        otherwise
+            wgt = mdl{i}.data.wgt;
+            pwr = mdl{i}.data.pwr;
+            x1 = min(wgt):0.1:max(wgt);
+            [fitPwr, gofPwr] = fit(wgt,pwr,"poly2");
+            [P_max(i), I_max(i)] = max(fitPwr(x2));
+            M_hopt(i) = I_max(i)/10/2.205;
+            line([0 I_max(i)/10],[P_max(i) P_max(i)],'color',c1,'linestyle','-.') 
+            line([I_max(i)/10 I_max(i)/10],[0 P_max(i)],'color',c2,'linestyle','--')
+    end
+end
+
+```
+
+
+
+Plot power fit stats
+
+
+
+```matlab:Code
+mean_r2 = string(round(mean(rmoutliers(r2),'omitnan'),2));
+mean_Pmax = string(round(mean(P_max,'omitnan')));
+mean_Mopt = string(round(mean(M_hopt,'omitnan'),1));
+str1 = strcat("\itMean R^2 = ", mean_r2);
+str2 = strcat("Mean P_{max} = ", mean_Pmax, " W");
+str3 = strcat("Mean M_{h.opt} = ", mean_Mopt, " kg");
+text(15,1850,{str1,str2,str3})
+
+```
+
+# Cadence
+
+
+Create subplot for cadence v mass
+
+
+
+```matlab:Code
+ax2 = subplot(3,1,2);
+x2 = 0:0.1:35;
+
+for i = 1:19
+    switch i
+        case{12,16}
+        otherwise
+            wgt = mdl{i}.data.wgt;
+            cad = mdl{i}.data.cad;
+            x1 = min(wgt):0.1:max(wgt);
+            [fitCad, gofCad] = fit(wgt,cad,"poly1");
+            plot(x1,fitCad(x1),'k')
+            xlim([0 35])
+            ylim([0 300])
+            hold on
+            scatter(wgt,cad,10,'k','filled')
+            r2(i) = gofCad.rsquare;
+    end
+end
+
+xlabel('Hanging mass (kg)')
+ylabel('Maximal 1-s cadence (rpm)')
+xlim([0 35])
+ylim([0 300])
+ax2.Box = 'off';
+ax2.XTick = x2(1:50:end);
+ax2.XTickLabels = round(x2(1:50:end)/2.205,1);
+title('B')
+ax2.Title.HorizontalAlignment = 'left';
+ax2.Title.VerticalAlignment = 'middle';
+ax2.Title.Position = [2, ax2.YLim(2), 0];
+
+```
+
+
+
+Plot Pmax and Mopt line
+
+
+
+```matlab:Code
+for i = 1:19
+    switch i
+        case{12,16}
+            C_opt(i) = nan;
+            M_hopt(i) = nan;
+        otherwise
+            wgt = mdl{i}.data.wgt;
+            cad = mdl{i}.data.cad;
+            x1 = min(wgt):0.1:max(wgt);
+            [fitCad, gofCad] = fit(wgt,cad,"poly1");
+            [fitPwr, gofPwr] = fit(wgt,pwr,"poly2");
+            C_opt(i) = fitCad(I_max(i)/10);
+            line([0 I_max(i)/10],[C_opt(i) C_opt(i)],'color',c3,'linestyle',':') 
+            line([I_max(i)/10 I_max(i)/10],[0 C_opt(i)],'color',c2,'linestyle','--')
+    end
+end
+
+```
+
+
+
+Plot cadence fit stats
+
+
+
+```matlab:Code
+mean_r2 = string(round(mean(rmoutliers(r2),'omitnan'),2));
+mean_Copt = string(round(mean(C_opt,'omitnan')));
+str1 = strcat("\itMean R^2 = ", mean_r2);
+str2 = strcat("Mean C_{opt} = ", mean_Copt, " rpm");
+text(15,250,{str1,str2})
+
+```
+
+# Torque
+
+
+Create subplot for torque v mass
+
+
+
+```matlab:Code
+ax3 = subplot(3,1,3);
+x2 = 0:0.1:20;
+
+for i = 1:19
+    switch i
+        case{12,16}
+            r2(i) = nan;
+            p1(i) = nan;
+        otherwise
+            wgt = mdl{i}.data.wgt;
+            trq = mdl{i}.data.trq;
+            x1 = min(wgt):0.1:max(wgt);
+            [fitTrq, gofTrq] = fit(wgt,trq,"poly1","Lower",[-Inf 0],"Upper",[Inf 0]);
+%             plot(x1,fitTrq(x1),'k')
+            plot(x1,x1*4.5,'k')
+            xlim([0 35])
+            ylim([0 300])
+            hold on
+            scatter(wgt,trq,10,'k','filled')
+            r2(i) = gofTrq.rsquare;
+            p1(i) = fitTrq.p1;
+    end
+end
+
+xlabel('Hanging mass (kg)')
+ylabel('Crank torque (N\cdotm)')
+xlim([0 35])
+ylim([0 300])
+ax3.Box = 'off';
+ax3.XTick = x2(1:50:end);
+ax3.XTickLabels = round(x2(1:50:end)/2.205,1);
+title('C')
+ax3.Title.HorizontalAlignment = 'left';
+ax3.Title.VerticalAlignment = 'middle';
+ax3.Title.Position = [2, ax3.YLim(2), 0];
+
+```
+
+
+
+Plot trq fit stats
+
+
+
+```matlab:Code
+mean_r2 = string(round(mean(rmoutliers(r2),'omitnan'),2));
+mean_p1 = string(round(mean(rmoutliers(p1),'omitnan'),1));
+str1 = strcat("\itMean R^2 = ", mean_r2);
+str2 = strcat("f(x) = ", string(mean_p1), "x");
+text(15,250,{str1,str2})
+```
