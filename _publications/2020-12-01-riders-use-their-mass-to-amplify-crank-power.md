@@ -10,5 +10,3 @@ citation: 'WILKINSON, R. D., A. G. CRESSWELL, and G. A. LICHTWARK. Riders Use Th
 ---
 
 [Download paper here](http://ross-wilkinson.github.io/files/Riders_Use_Their_Body_Mass_to_Amplify_Crank_Power.14.pdf)
-
-Recommended citation: WILKINSON, R. D., A. G. CRESSWELL, and G. A. LICHTWARK. Riders Use Their Body Mass to Amplify Crank Power during Nonseated Ergometer Cycling. Med. Sci. Sports Exerc., Vol. 52, No. 12, pp. 2599–2607, 2020.
