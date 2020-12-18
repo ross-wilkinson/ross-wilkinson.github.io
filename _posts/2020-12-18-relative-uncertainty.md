@@ -1,7 +1,7 @@
 ---
 title: 'How many observations should I make? Relative uncertainty of a measurement.'
 date: 2020-12-18
-permalink: /posts/2020/12/relative-uncertainty/
+permalink: /posts/2020/12/18-relative-uncertainty/
 tags:
   - statistics
   - research
