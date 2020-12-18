@@ -2,7 +2,7 @@
 title: "Riders Use Their Body Mass to Amplify Crank Power during Nonseated Ergometer Cycling"
 collection: publications
 permalink: /publication/2020-12-01-riders-use-their-mass-to-amplify-crank-power
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
+excerpt: ''
 date: 2020-12-01
 venue: 'Medicine and Science in Sports and Exercise'
 paperurl: 'https://doi.org/10.1249/MSS.0000000000002408'
