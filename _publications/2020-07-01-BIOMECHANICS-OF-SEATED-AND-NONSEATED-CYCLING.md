@@ -1,9 +1,9 @@
 ---
 title: "The Mechanics of Seated and Nonseated Cycling at Very-High-Power Output: A Joint-Level Analysis"
 collection: publications
-permalink: /publications/2020-07-BIOMECHANICS-OF-SEATED-AND-NONSEATED-CYCLING
+permalink: /publications/2020-07-01-BIOMECHANICS-OF-SEATED-AND-NONSEATED-CYCLING
 excerpt: ''
-date: 2020-07
+date: 2020-07-01
 venue: 'Medicine and Science in Sports and Exercise'
 paperurl: 'https://doi.org/10.1249/MSS.0000000000002285'
 citation: 'WILKINSON, R. D., G. A. LICHTWARK, and A. G. CRESSWELL. The Mechanics ofSeated and Nonseated Cycling at Very-High-Power Output: A Joint-Level Analysis. Med. Sci. Sports Exerc., Vol. 52, No. 7, pp. 1585–1594, 2020.'
