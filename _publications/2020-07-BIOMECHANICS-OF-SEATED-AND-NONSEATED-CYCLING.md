@@ -1,7 +1,7 @@
 ---
 title: "The Mechanics of Seated and Nonseated Cycling at Very-High-Power Output: A Joint-Level Analysis"
 collection: publications
-permalink: /publication/2020-07-BIOMECHANICS-OF-SEATED-AND-NONSEATED-CYCLING
+permalink: /publications/2020-07-BIOMECHANICS-OF-SEATED-AND-NONSEATED-CYCLING
 excerpt: ''
 date: 2020-07
 venue: 'Medicine and Science in Sports and Exercise'
