@@ -57,7 +57,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : rd_wilkinson
 facebook:
   username               :
   app_id                 :
@@ -81,13 +81,13 @@ analytics:
 # Site Author
 author:
   name             : "Your Sidebar Name"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
-  employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
+  avatar           : "headshot_trees2_downsample.jpeg"
+  bio              : "Postdoctoral Associate, Locomotion Laboratory, University of Colorado Boulder"
+  location         : "Boulder, CO, USA"
+  employer         : 
+  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Wilkinson+RD"
+  googlescholar    : "https://scholar.google.com/citations?user=y39yme4AAAAJ&hl=en&authuser=2"
+  email            : "ross.wilkinson@colorado.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "ross-wilkinson"
   google_plus      :
   keybase          :
   instagram        :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : "rd_wilkinson"
   vine             :
   weibo            :
   xing             :
