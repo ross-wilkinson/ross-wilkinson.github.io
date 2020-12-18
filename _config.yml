@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Ross Wilkinson, PhD"
 title_separator          : "-"
-name                     : &name "Ross Wilkinson"
+name                     : &name "Ross Wilkinson, PhD"
 description              : &description "My personal website and blog."
 url                      : https://ross-wilkinson.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
