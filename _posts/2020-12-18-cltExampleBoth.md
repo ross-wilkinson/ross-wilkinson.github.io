@@ -1,3 +1,13 @@
+---
+title: 'How many observations should I make? Relative uncertainty of a measurement.'
+date: 2020-12-18
+permalink: /posts/2020/12/relative-uncertainty/
+tags:
+  - statistics
+  - research
+  - matlab
+---
+
 \>0 \>0
 
 # How many observations should I make? An application of the central limit theorem to human performance variables  {#how-many-observations-should-i-make-an-application-of-the-central-limit-theorem-to-human-performance-variables .unnumbered}
