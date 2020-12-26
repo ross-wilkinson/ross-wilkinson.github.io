@@ -1,5 +1,5 @@
 ---
-title: "BIOL1900 - Biophysical Development, Measurement and Assessment"
+title: "Biophysical Development, Measurement and Assessment (BIOL1900)"
 collection: teaching
 type: "Teaching Assistant"
 permalink: /teaching/uq-biol1900
