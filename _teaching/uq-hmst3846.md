@@ -1,5 +1,5 @@
 ---
-title: "HMST3846 - Research Skills"
+title: "Research Skills (HMST3846)"
 collection: teaching
 type: "Teaching Assistant"
 permalink: /teaching/uq-hmst3846
