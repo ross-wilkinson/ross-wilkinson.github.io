@@ -1,5 +1,5 @@
 ---
-title: "NEUR2530 - Motor Control and Learning"
+title: "Motor Control and Learning (NEUR2530)"
 collection: teaching
 type: "Teaching Assistant"
 permalink: /teaching/uq-neur2530
