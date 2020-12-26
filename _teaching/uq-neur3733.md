@@ -8,15 +8,12 @@ date: 2019-01-01
 location: "Brisbane QLD, Australia"
 ---
 
-Responsibilities
-===
+## Responsibilities
 * Facilitation of laboratory sessions and proctoring of in-class examinations
 
-Performance evaluation
-===
+## Performance evaluation
 * Overall rating from students (Scale 1-5): 
   * Mean=4.9, n=18
 
-Course coordinator
-===
+## Course coordinator
 * Dr Glen Lichtwark
