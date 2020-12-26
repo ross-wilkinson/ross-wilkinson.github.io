@@ -6,6 +6,7 @@ permalink: /teaching/uq-neur2530
 venue: "University of Queensland, School of Human Movement and Nutrition Sciences"
 date: 2019-01-01
 location: "Brisbane QLD, Australia"
+excerpt: ""
 ---
 
 ## Performance evaluation
