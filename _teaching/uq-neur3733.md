@@ -1,5 +1,5 @@
 ---
-title: "NEUR3733 - Neuromechanical Basis of Human Movement"
+title: "Neuromechanical Basis of Human Movement (NEUR3733)"
 collection: teaching
 type: "Teaching Assistant"
 permalink: /teaching/uq-neur3733
