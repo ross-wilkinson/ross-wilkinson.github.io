@@ -1,5 +1,5 @@
 ---
-title: "BIOL2630 - Biomechanics"
+title: "Biomechanics (BIOL2630)"
 collection: teaching
 type: "Teaching Assistant"
 permalink: /teaching/uq-biol2630
