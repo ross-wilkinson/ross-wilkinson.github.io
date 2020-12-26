@@ -16,7 +16,7 @@ Current position
 
 Education
 ======
-* B. in Exercise and Sports Science, University of Queensland, 2012
+* B.S. in Exercise and Sports Science, University of Queensland, 2012
 * Ph.D in Biomechanics, University of Queensland, 2020
 
 Research experience
